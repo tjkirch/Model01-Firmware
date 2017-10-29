@@ -16,6 +16,8 @@
 // The Kaleidoscope core
 #include "Kaleidoscope.h"
 
+// Allows modifiers to serve a different purpose when tapped
+#include <Kaleidoscope-SpaceCadet.h>
 
 // Support for macros
 #include "Kaleidoscope-Macros.h"
@@ -244,7 +246,23 @@ void setup() {
     // The macros plugin adds support for macros
     &Macros,
 
+    // SpaceCadet allows modifiers to be tapped to serve as another key
+    &SpaceCadet
   );
+
+  // Set the keymap with a timeout per-key
+  // Setting is {KeyThatWasPressed, AlternativeKeyToSend, TimeoutInMS}
+  // Note: must end with the SPACECADET_MAP_END delimiter
+  static kaleidoscope::SpaceCadet::KeyBinding spacecadetmap[] = {
+      {Key_LeftGui, Key_Escape, 500}
+    , {Key_LeftAlt, Key_LeftCurlyBracket, 500}
+    , {Key_RightAlt, Key_RightCurlyBracket, 500}
+    , {Key_LeftControl, Key_LeftBracket, 500}
+    , {Key_RightControl, Key_RightBracket, 500}
+    , SPACECADET_MAP_END
+  };
+  // Set the map.
+  SpaceCadet.map = spacecadetmap;
 
   // We set the brightness of the rainbow effects to 150 (on a scale of 0-255)
   // This draws more than 500mA, but looks much nicer than a dimmer effect

@@ -1,3 +1,7 @@
+# tjkirch's Model 01 Firmware
+
+Upstream README follows.
+
 # Keyboardio Model 01 Firmware
 
 The default firmware for the Keyboardio Model 01

@@ -25,9 +25,6 @@
 // Support for controlling the keyboard's LEDs
 #include "Kaleidoscope-LEDControl.h"
 
-// Support for "Numlock" mode, which is mostly just the Numlock specific LED mode
-#include "Kaleidoscope-Numlock.h"
-
 // Support for an "LED off mode"
 #include "LED-Off.h"
 
@@ -117,7 +114,7 @@ enum { MACRO_VERSION_INFO,
   * the numbers 0, 1 and 2.
   */
 
-enum { QWERTY, FUNCTION, NUMPAD }; // layers
+enum { QWERTY, FUNCTION }; // layers
 
 /* This comment temporarily turns off astyle's indent enforcement
  *   so we can make the keymaps actually resemble the physical key layout better
@@ -299,20 +296,12 @@ void setup() {
     // The stalker effect lights up the keys you've pressed recently
     &StalkerEffect,
 
-    // The numlock plugin is responsible for lighting up the 'numpad' mode
-    // with a custom LED effect
-    &NumLock,
-
     // The macros plugin adds support for macros
     &Macros,
 
     // The MouseKeys plugin lets you add keys to your keymap which move the mouse.
     &MouseKeys
   );
-
-  // While we hope to improve this in the future, the NumLock plugin
-  // needs to be explicitly told which keymap layer is your numpad layer
-  NumLock.numPadLayer = NUMPAD;
 
   // We configure the AlphaSquare effect to use RED letters
   AlphaSquare.color = { 255, 0, 0 };

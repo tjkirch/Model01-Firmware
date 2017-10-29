@@ -16,8 +16,6 @@
 // The Kaleidoscope core
 #include "Kaleidoscope.h"
 
-// Support for keys that move the mouse
-#include "Kaleidoscope-MouseKeys.h"
 
 // Support for macros
 #include "Kaleidoscope-Macros.h"
@@ -299,8 +297,6 @@ void setup() {
     // The macros plugin adds support for macros
     &Macros,
 
-    // The MouseKeys plugin lets you add keys to your keymap which move the mouse.
-    &MouseKeys
   );
 
   // We configure the AlphaSquare effect to use RED letters

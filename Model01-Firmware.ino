@@ -45,29 +45,29 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
   (Key_Escape,      Key_1, Key_2, Key_3, Key_4, Key_5, Key_Equals,
    Key_Tab,         Key_Q, Key_W, Key_E, Key_R, Key_T, Key_LeftBracket,
    Key_LeftShift,   Key_A, Key_S, Key_D, Key_F, Key_G,
-   Key_Backtick,    Key_Z, Key_X, Key_C, Key_V, Key_B, Key_Backslash,
+   Key_Backtick,    Key_Z, Key_X, Key_C, Key_V, Key_B, Key_Spacebar,
    Key_LeftControl, Key_LeftGui, Key_LeftAlt, Key_Enter,
    ShiftToLayer(FUNCTION),
 
    Key_LEDEffectNext, Key_6, Key_7, Key_8,     Key_9,      Key_0,         Key_Minus,
    Key_RightBracket,  Key_Y, Key_U, Key_I,     Key_O,      Key_P,         Key_Quote,
                       Key_H, Key_J, Key_K,     Key_L,      Key_Semicolon, Key_RightShift,
-   Key_Backspace,     Key_N, Key_M, Key_Comma, Key_Period, Key_Slash,     Key_PageDown,
+   Key_Backspace,     Key_N, Key_M, Key_Comma, Key_Period, Key_Slash,     Key_Backslash,
    Key_Delete, Key_Enter, Key_Spacebar, Key_RightControl,
    ShiftToLayer(FUNCTION)),
 
   [FUNCTION] =  KEYMAP_STACKED
   (Key_Sysreq, Key_F1,     Key_F2, Key_F3,        Key_F4,                Key_F5, ___,
-   ___,        ___,        ___,    ___,           ___,                   ___,    ___,
+   ___,        ___,        ___,    ___,           ___,                   ___,    Key_PageUp,
    ___,        ___,        ___,    ___,           ___,                   ___,
-   ___,        ___,        ___,    ___,           M(MACRO_VERSION_INFO), ___,    ___,
+   ___,        ___,        ___,    ___,           M(MACRO_VERSION_INFO), ___,    Key_PageDown,
    ___,        ___,        ___,    Key_Backspace,
    ___,
 
    Consumer_ScanPreviousTrack, Key_F6,                 Key_F7,        Key_F8,      Key_F9,         Key_F10,          Key_F11,
    Consumer_PlaySlashPause,    Consumer_ScanNextTrack, ___,           Key_Insert,  ___,            Key_PrintScreen,  Key_F12,
                                Key_LeftArrow,          Key_DownArrow, Key_UpArrow, Key_RightArrow, ___,              ___,
-   ___,               ___,     Key_Mute,               Key_Home,      Key_End,     ___,            Key_PageUp,
+   ___,               ___,     Key_Mute,               Key_Home,      Key_End,     ___,            ___,
    ___, ___, ___, ___,
    ___)
 };

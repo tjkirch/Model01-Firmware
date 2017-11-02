@@ -3,7 +3,7 @@
 // See "LICENSE" for license details
 
 #ifndef BUILD_INFORMATION
-#define BUILD_INFORMATION "tjk 20171029"
+#define BUILD_INFORMATION "tjk 20171102"
 #endif
 
 

@@ -57,11 +57,11 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
    ShiftToLayer(FUNCTION)),
 
   [FUNCTION] =  KEYMAP_STACKED
-  (Key_Sysreq, Key_F1,     Key_F2, Key_F3,        Key_F4,                Key_F5, ___,
-   ___,        ___,        ___,    ___,           ___,                   ___,    Key_PageUp,
-   ___,        ___,        ___,    ___,           ___,                   ___,
-   ___,        ___,        ___,    ___,           M(MACRO_VERSION_INFO), ___,    Key_PageDown,
-   ___,        ___,        ___,    Key_Backspace,
+  (Key_Sysreq, Key_F1,     Key_F2,   Key_F3,        Key_F4,                Key_F5, ___,
+   ___,        ___,        ___,      ___,           ___,                   ___,    Key_PageUp,
+   ___,        ___,        ___,      ___,           ___,                   ___,
+   ___,        ___,        Key_Home, Key_End,       M(MACRO_VERSION_INFO), ___,    Key_PageDown,
+   ___,        ___,        ___,      Key_Backspace,
    ___,
 
    Consumer_ScanPreviousTrack, Key_F6,                 Key_F7,        Key_F8,      Key_F9,         Key_F10,          Key_F11,

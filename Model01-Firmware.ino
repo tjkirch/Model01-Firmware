@@ -3,7 +3,7 @@
 // See "LICENSE" for license details
 
 #ifndef BUILD_INFORMATION
-#define BUILD_INFORMATION "tjk 20171215"
+#define BUILD_INFORMATION "tjk 20180226"
 #endif
 
 
@@ -135,6 +135,9 @@ void hostPowerManagementEventHandler(kaleidoscope::HostPowerManagement::Event ev
 }
 
 void setup() {
+  // Start in Boot Protocol mode, e.g. for BIOS usage
+  BootKeyboard.setProtocol(HID_BOOT_PROTOCOL);
+
   Kaleidoscope.setup();
 
   Kaleidoscope.use(

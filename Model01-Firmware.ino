@@ -42,7 +42,7 @@ enum { QWERTY, FUNCTION }; // layers
 
 
 // *INDENT-OFF*
-const Key keymaps[][ROWS][COLS] PROGMEM = {
+KEYMAPS(
 
   [QWERTY] = KEYMAP_STACKED
   (Key_Escape,      Key_1, Key_2, Key_3, Key_4, Key_5, Key_Equals,
@@ -73,7 +73,7 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
    ___,                        ___,                    Consumer_Mute, Key_Home,    Key_End,        ___,              ___,
    ___, ___, ___, ___,
    ___)
-};
+) // KEYMAPS(
 // *INDENT-ON*
 
 
